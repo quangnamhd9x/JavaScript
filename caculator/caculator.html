@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input id="fristNumber">
+    <input id="seconNumber"><br>
+    <br>
+    <button id="addition" onclick="addition()">Addition(+)</button>
+    <button id="Subtration" onclick="subtration()">Subtration(-)</button>
+    <button id="Multiplication" onclick="multiplication()">Multiplication(X)</button>
+    <button id="Division" onclick="division()">Division(/)</button>
+    <p id="result"></p>
+</body>
+</html>
+    <script>
+        function addition() {
+            let F = +document.getElementById('fristNumber').value;
+            let S = +document.getElementById('seconNumber').value;
+        result = F + S;
+        document.getElementById('result').innerHTML = result;
+        }
+        function subtration() {
+            let F = +document.getElementById('fristNumber').value;
+            let S = +document.getElementById('seconNumber').value;
+            result = F - S;
+            document.getElementById('result').innerHTML = result;
+        }
+        function multipliccation() {
+            let F = +document.getElementById('fristNumber').value;
+            let S = +document.getElementById('seconNumber').value;
+            result = F * S;
+            document.getElementById('result').innerHTML = result;
+        }
+        function division() {
+            let F = +document.getElementById('fristNumber').value;
+            let S = +document.getElementById('seconNumber').value;
+            result = F / S;
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
