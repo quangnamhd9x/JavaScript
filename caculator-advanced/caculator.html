@@ -1,0 +1,63 @@
+<!DOConclick="" html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="caculator.css">
+</head>
+<body>
+    <input id="inputNumber" style="width: 300px;height: 50px" onclick="text">
+    <br>
+    <button onclick="button(Rad)">Rad</button>
+    <button onclick="button()"></button>
+    <button onclick="button(x)">x!</button>
+    <button onclick="button('(')">(</button>
+    <button onclick="button(')')">)</button>
+    <button onclick="button('%')">%</button>
+    <button type="reset" id="none" onclick="button(AC)">AC</button>
+    <br>
+    <button onclick="button(Inv)">Inv</button>
+    <button onclick="button(sin)">sin</button>
+    <button onclick="button(In)">In</button>
+    <button onclick="button(1)">1</button>
+    <button onclick="button(2)">2</button>
+    <button onclick="button(3)">3</button>
+    <button onclick="button('/')">/</button>
+    <br>
+    <button onclick="button(pi)">pi</button>
+    <button onclick="button(cos)">cos</button>
+    <button onclick="button(log)">log</button>
+    <button onclick="button(4)">4</button>
+    <button onclick="button(5)">5</button>
+    <button onclick="button(6)">6</button>
+    <button onclick="button('*')">*</button>
+    <br>
+    <button onclick="button(e)">e</button>
+    <button onclick="button('tan')">tan</button>
+    <button onclick="button('√')">√</button>
+    <button onclick="button(1)">1</button>
+    <button onclick="button(2)">2</button>
+    <button onclick="button(3)">3</button>
+    <button onclick="button('-')">-</button>
+    <br>
+    <button onclick="button(Ans)">Ans</button>
+    <button onclick="button(EXP)">EXP</button>
+    <button onclick="button()"></button>
+    <button onclick="button(0)">0</button>
+    <button onclick="button('.')">.</button>
+    <button style="background-color: dodgerblue" onclick="calculator()">=</button>
+    <button onclick="button('+')">+</button>
+</body>
+    <script>
+        function button(value) {
+            document.getElementById('inputNumber').value +=value;
+        }
+        function calculator() {
+            let tinh = document.getElementById('inputNumber').value;
+            let result = eval(tinh);
+            document.getElementById('inputNumber').value = result;
+            let no = ;
+            document.getElementById('none').value = no;
+        }
+    </script>
+</html>
