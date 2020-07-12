@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let name = prompt("Nhập tên đi:");
+        if (name == "admin"){
+                let password = prompt("Nhập mật khẩu xem nào:");
+                if (password == "themaster"){
+                    alert("Chào anh, em lỡ lời :((");
+                }else if (password == "null"){
+                    alert("Tao thoát rồi!");
+                }else {
+                    alert("Về nhà đi, mẹ cầm roi kìa");
+                }
+        }else if (name == null) {
+            alert("Tao thoát rồi!");
+        }else {
+            alert("Tao không biết mày!");
+        }
+    </script>
+</body>
+</html>
