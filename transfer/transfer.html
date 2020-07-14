@@ -7,14 +7,14 @@
 <body>
     <input id="amount">
     <select id="s1">
-        <option value="0.85">USD</option>
-        <option value="1.3">EURO</option>
-        <option value="24000">VND</option>
+        <option value="1">USD</option>
+        <option value="0.85">EURO</option>
+        <option value="23000">VND</option>
     </select>
     <select id="s2">
-        <option value="0.85">USD</option>
-        <option value="1.3">EURO</option>
-        <option value="24000">VND</option>
+        <option value="1">USD</option>
+        <option value="0.85">EURO</option>
+        <option value="23000">VND</option>
     </select>
     <button id="convert" onclick="convert()">convert</button>
     <p id="result"></p>
@@ -26,7 +26,7 @@
         let s2 = document.getElementById('s2').value;
         let amount = document.getElementById('amount').value;
         result = amount * s2 / s1;
-        document.getElementById('result').innerHTML = result;
+        document.getElementById('result').innerHTML = result.toFixed(2);
 
     }
 </script>

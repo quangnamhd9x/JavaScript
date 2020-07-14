@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <img src="1.png"  id="myimage" style="width: 200px"/>
+        <p>An vao nut de di chuyen anh sang phai</p>
+        <input type="button" value="An vao day" onclick="moveRight();"/>
+    </form>
+    <script>
+        let imgob = null;
+        imgob = document.getElementById("myimage");
+        function init() {
+            imgob = document.getElementById("myimage");
+            imgob.style.position = "relative";
+            imgob.style.left = "0px";
+        }
+        function moveRight() {
+            imgob.style.left = parseInt(imgob.style.left) + 10 + "px";
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var weight = +prompt("nhap can nang:");
+        var height = +prompt("nhap chieu cao (tinh theo m)");
+        var bmi = weight /(height * height);
+        if (bmi < 18.5) {
+            alert(bmi.toFixed(2) + "ban qua gay");
+        }else if (bmi >= 18.5 && bmi <25.0) {
+            alert(bmi.toFixed(2) + "ban binh thuong");
+        }else if (bmi >= 25.0 && bmi <= 30.0) {
+            alert(bmi.toFixed(2) + "ban qua beo");
+        }else {
+            alert("bmi cua ban la" + bmi.toFixed(2));
+        }
+
+    </script>
+</body>
+</html>

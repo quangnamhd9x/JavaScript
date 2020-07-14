@@ -5,20 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-        let num = prompt("nhap so:");
-        switch (num) {
-            case "":
-                alert(1);
-                break;
-            case "num < 0":
-                alert(-1);
-                break;
-            case "num":
-                alert(0);
-                break;
+<script>
+    let num = +prompt("nhap so:");
+    num = num >0?1:-1;
+    switch (num) {
+        case 1:
+            alert(1);
+            break;
+        case -1:
+            alert(-1);
+            break;
+        default:
+            alert(0);
+            break;
 
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
