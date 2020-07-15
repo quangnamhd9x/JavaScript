@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap vao canh a: ");
+    let b = +prompt("nhap vao canh b: ");
+    let c = +prompt("nhap vao canh c: ");
+    if (a > 0) {
+        if (b > 0) {
+            if (c > 0) {
+                if (a + b > c) {
+                    if (b + c > a) {
+                        if (a + c > b) {
+                            alert("day la 3 canh cua mot tam giac");
+                        } else {
+                            alert("day khong phai 3 canh cua tam giac");
+                        }
+                    } else {
+                        alert("day khong phai 3 canh cua tam giac");
+                    }
+                } else {
+                    alert("day khong phai 3 canh cua tam giac");
+                }
+            }
+        }
+    } else {
+        alert("day khong phai 3 canh cua tam giac");
+    }
+</script>
+</body>
+</html>

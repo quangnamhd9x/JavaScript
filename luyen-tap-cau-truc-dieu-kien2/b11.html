@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhap vao so tien thu nhap hang thang: ");
+        if (a > 100000000) {
+            alert("ban phai nop so thue la: " + a*10/100 + "vnd");
+        } else if (a > 50000000) {
+            alert("ban phai nop so thue la: " + a*7/100 + "vnd");
+        } else if (a > 20000000) {
+            alert("ban phai nop so thue la: " + a*5/100 + "vnd");
+        } else if (a>=10000000){
+            alert("ban phai nop so thue la: " + a*2/100 + "vnd");
+        }else {
+            alert("ban khong phai nop thue");
+        }
+    </script>
+</body>
+</html>

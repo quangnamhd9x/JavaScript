@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhap vao gia tri a:");
+        let b = +prompt("nhap vao gia tri b:");
+        let c = +prompt("nhap vao gia tri c:");
+        let denta = b*b - 4*a*c;
+        if (denta>0) {
+            alert("x1 = " + (-b - Math.sqrt(denta) / 2 * a));
+            alert("x2 = " + (-b + Math.sqrt(denta) / 2 * a));
+        }
+        if (denta=0){
+            alert("x1 = x2 = " + -b/2*a);
+        }
+        if (denta < 0){
+            alert("phuong trinh vo nghiem");
+        }
+    </script>
+</body>
+</html>
