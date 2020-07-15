@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    body {
+        background-image: url("https://image.bizlive.vn/uploaded/dinhthom/2020_04_29/paris_sztg.jpg");
+        background-repeat: no-repeat;
+    }
+</style>
 <body onload="docready()">
-<img id="nobita" src="2.png" style="position: absolute;left: 0;top: 0;" height="100" width="80"/>
+<img id="nobita" src="2.jpg" style="position: absolute;left: 0;top: 0;" height="100" width="80"/>
+<img id="nobita2" src="3.jpg" style="position: absolute;left: 0;top: 0;" height="100" width="80"/>
+<
 <script>
     function uparrowpressed() {
         let element = document.getElementById("nobita");
-        element.style.top = parseInt(element.style.top) - 5 + 'px';
+        element.style.top = parseInt(element.style.top) - 20 + 'px';
     }
 
     function downarrowpressed() {
         var element = document.getElementById("nobita");
-        element.style.top = parseInt(element.style.top) + 5 + 'px';
+        element.style.top = parseInt(element.style.top) + 20 + 'px';
     }
 
     function leftarrowpressed() {
         var element = document.getElementById("nobita");
-        element.style.left = parseInt(element.style.left) - 5 + 'px';
+        element.style.left = parseInt(element.style.left) - 20 + 'px';
     }
 
     function rightarrowpressed() {
         var element = document.getElementById("nobita");
-        element.style.left = parseInt(element.style.left) + 5 + 'px';
+        element.style.left = parseInt(element.style.left) + 20 + 'px';
     }
 
     function moveselection(evt) {
