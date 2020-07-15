@@ -4,30 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<style>
-</style>
 <body>
-    <div class="div1">
-
-    </div>
-</body>
 <script>
-    let bang
-    bang = "<table border = '1' width='300' cellspacing ='0' cellpadding='3'>"
-    for (j = 1) {
-        bang = bang + "</th>";
-        for (var i = 1; i <= 10; i++) {
-            var product = 2 * i
-            document.write("2 x " + i + " = " + product + "<br>");
+    let bang;
+    bang = "<table border = '1' width='800' cellspacing ='0' cellpadding='3'>"
+
+    for (i = 1; i <= 10; i++) {
+        bang += "<tr>";
+
+        for (j = 1; j <= 10; j++) {
+            result = j * i
+            bang += "<td>" + j +"x" + i + "=" + result + "</td>";
         }
+        bang += "<tr>";
     }
-    for (var i = 1; i <=10 ;i++){
-        var product = 2 * i
-        document.write("2 x " + i + " = " + product + "<br>");
-    }
-    for (var i = 1; i <=10 ;i++){
-        var product = 2 * i
-        document.write("2 x " + i + " = " + product + "<br>");
-    }
+    bang += "</table>";
+
+    document.write(bang);
+
 </script>
+</body>
 </html>
