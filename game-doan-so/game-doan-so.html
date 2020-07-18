@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<button style="font-size: 50px;margin-top: 40px;margin-left: 40px" onclick="play()">Chơi với em nào <3 </button>
+<script>
+    function play() {
+        var n = +prompt("Nhập vào khoảng số đi anh yêu: ");
+        var r = Math.floor(Math.random() * n + 1);
+        for (let i = 1; i < 3; i++) {
+            var m = +prompt("nhập số đoán nà: ");
+            if (m == r) {
+                alert("Trúng 5 tỷ rồi, hay mình đi Rì sọt nha anh.hihi");
+            } else {
+                alert("Lại đi anh..");
+            }
+        }alert("Anh hết tiền rồi!, về xin vợ đi nha..");
+    }
+</script>
+</body>
+</html>
