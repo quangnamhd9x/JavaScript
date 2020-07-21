@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let array = [1,2,5,4,7,9,3,22,15,-5,77,120,14,365];
+        let max = 0;
+        let avg = 0;
+        for (var i = 1; i < array.length; i++) {
+            if (array[i]>array[i-1]){
+                max = array[i];
+            }
+            avg = (array[i]+array[i++])/array.length
+        }console.log(max);
+        console.log(avg);
+    </script>
+</body>
+</html>
