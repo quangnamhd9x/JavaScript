@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let num = prompt("nhap day so ngau nhien");
+        let array = num.toString();
+        let result = [array[0]];
+
+        for (let i = 1; i < array.length ; i++) {
+            if ((array[i-1]%2 === 0)&&(array[i]%2===0)){
+                result.push("-", array[i]);
+        }else {
+                result.push(array[i]);
+            }
+        }
+        console.log(result.join(""));
+    </script>
+</body>
+</html>
