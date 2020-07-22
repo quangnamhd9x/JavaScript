@@ -5,14 +5,17 @@
 </head>
 <body>
 <script type="text/javascript">
-    let a = +prompt("nhap gia tri");
-    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    for (let i = 0; i < array.length; i++) {
-        if (a == array[i]) {
-            alert("PAssss");
-        } else if (a)
+    function inputArray(marks) {
+        let N = prompt("Nhap so phan tu cua mang: ");
+        for (let i = 0; i < N; i++) {
+            marks[i] = prompt("Nhap phan tu thu " + i + ": ");
         }
     }
+    let arr = new Array();
+    inputArray(arr);
+    let a = arr.join("");
+    let result = a.length;
+    document.write("so ky tu trong mang la "+result);
 </script>
 </body>
 </html>
