@@ -5,10 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-        let a = ["2","4,6,8,10];
-        let b = [1,2,3,5,7];
+<script>
+    let a = ["2", "4", "6", "8", "10"];
+    let b = ["1", "2", "3", "5", "7"];
+    for (var i = 0; i < a.length; i++) {
+        for (var j = 0; j < b.length; j++) {
+            if (a[i] == b[j]) {
+                console.log("2 chuoi giong nhau tai so " + a[i]);
+            }
+        }
+    }
 
-    </script>
+</script>
 </body>
 </html>
