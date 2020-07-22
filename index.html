@@ -5,17 +5,16 @@
 </head>
 <body>
 <script type="text/javascript">
-    function inputArray(marks) {
-        let N = prompt("Nhap so phan tu cua mang: ");
-        for (let i = 0; i < N; i++) {
-            marks[i] = prompt("Nhap phan tu thu " + i + ": ");
-        }
+    let input = prompt("nhap chuoi thu nhat");
+    let input2 = prompt("nhap chuoi thu 2");
+    let chuoi1 = input.toString();
+    let chuoi2 = input2.toString();
+    if (chuoi1 === chuoi2) {
+        alert("2 chuoi giong nhau");
+    } else {
+        alert("2 chuoi khong bang nhau");
     }
-    let arr = new Array();
-    inputArray(arr);
-    let a = arr.join("");
-    let result = a.length;
-    document.write("so ky tu trong mang la "+result);
+
 </script>
 </body>
 </html>

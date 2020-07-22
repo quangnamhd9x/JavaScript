@@ -6,16 +6,15 @@
 </head>
 <body>
 <script>
-    let a = ["2", "4", "6", "8", "10"];
-    let b = ["1", "2", "3", "5", "7"];
-    for (var i = 0; i < a.length; i++) {
-        for (var j = 0; j < b.length; j++) {
-            if (a[i] == b[j]) {
-                console.log("2 chuoi giong nhau tai so " + a[i]);
-            }
-        }
+    let input = prompt("nhap chuoi thu nhat");
+    let input2 = prompt("nhap chuoi thu 2");
+    let chuoi1 = input.toString();
+    let chuoi2 = input2.toString();
+    if (chuoi1 === chuoi2) {
+        alert("2 chuoi giong nhau");
+    } else {
+        alert("2 chuoi khong bang nhau");
     }
-
 </script>
 </body>
 </html>
