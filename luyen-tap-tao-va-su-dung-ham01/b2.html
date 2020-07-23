@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input">
+<button onclick="number()">Result</button>
+<p id="ketqua"></p>
+<script>
+    function number() {
+        var num = document.getElementById("input").value;
+        num++
+        document.getElementById("ketqua").innerHTML = num;
+    }
+</script>
+
+</body>
+</html>

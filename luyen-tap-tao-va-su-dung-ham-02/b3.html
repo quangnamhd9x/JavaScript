@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   alert(number(+prompt("nhap so")));
+    function number(num) {
+        let result = 1;
+        if (num < 0) {
+            return false
+        } else if (num == 0) {
+            result = 1;
+        } else {
+            for (let i = 1; i <= num; i++) {
+                result *= i;
+            }
+            alert(result);
+        }return result
+    }
+</script>
+
+</body>
+</html>

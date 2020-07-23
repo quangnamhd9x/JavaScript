@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hinh tron</h1>
+<input type="number" id="input" placeholder="Duong kinh">
+<button onclick="acreage()">dien tich</button>
+<button onclick="perimeter()">chu vi</button>
+<p id="ketqua"></p>
+<script>
+    function acreage() {
+        var num = document.getElementById("input").value;
+        var result = ((num * num) / 4) * 3.14
+        document.getElementById("ketqua").innerHTML = "KET QUA LA " + result;
+    }
+    function perimeter() {
+        var num = document.getElementById("input").value;
+        var result = num * 3.14
+        document.getElementById("ketqua").innerHTML = "KET QUA LA " + result;
+    }
+</script>
+
+</body>
+</html>
