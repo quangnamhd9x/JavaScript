@@ -5,16 +5,24 @@
 </head>
 <body>
 <script type="text/javascript">
-    let input = prompt("nhap chuoi thu nhat");
-    let input2 = prompt("nhap chuoi thu 2");
-    let chuoi1 = input.toString();
-    let chuoi2 = input2.toString();
-    if (chuoi1 === chuoi2) {
-        alert("2 chuoi giong nhau");
-    } else {
-        alert("2 chuoi khong bang nhau");
+    msg = 'codegym';
+    for(var x = 4; x < msg.length + 1; x++)
+    {
+        if(msg.length == 3)
+        {
+            for (var i = 2; i < 7; i++)
+            {
+                console.log(i);
+            }
+        }
+        else
+        {
+            for (var i = msg.length;  i > (msg.length - 3); i--)
+            {
+                console.log(i);
+            }
+        }
     }
-
 </script>
 </body>
 </html>
