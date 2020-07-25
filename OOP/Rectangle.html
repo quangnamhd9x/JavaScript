@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p id="acreage"></p>
+<p id="perimeter"></p>
+<canvas id="myCanvas" width="300" height="150" style="border: 1px solid red;"></canvas>
+<script>
+    function rectangle(length,width){
+        this.length = length;
+        this.width = width;
+        this.getLength = function () {
+            return length;
+        }
+        this.getWidth = function () {
+            return width;
+        }
+        this.setLength = function (length) {
+            this.length = length;
+        }
+        this.setWidth = function (width) {
+            this.width = width;
+        }
+    }
+    var rectangle = new rectangle(150,100);
+    rectangle.setLength(100);
+    rectangle.getWidth(50);
+    let length = rectangle.length
+    let width = rectangle.width
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.rect(50, 30, length, width);
+    ctx.stroke();
+    document.getElementById("acreage").innerHTML = "Dien tich: " + (length*width) + "m vuong";
+    document.getElementById("perimeter").innerHTML = "Chu vi: " + (length+width)*2 + "m";
+</script>
+</body>
+</html>
