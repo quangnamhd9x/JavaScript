@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 3, 4, 5, 6, 7, 4, 8, 9, 10];
+    function findNumber(a) {
+        var count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == a){
+                alert("o vi tri chi so " + i);
+                count++;
+            }
+        }
+    }
+    findNumber(+prompt("nhap so bat ky"));
+</script>
+</body>
+</html>

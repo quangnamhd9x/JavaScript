@@ -45,3 +45,4 @@ class Product {
         this.total = total;
     }
 }
+

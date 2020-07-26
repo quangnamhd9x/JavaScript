@@ -8,11 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+<canvas id="myCanvas" width="680" height="460" style="border: 5px solid orangered"></canvas>
 <p id="acreage"></p>
 <p id="perimeter"></p>
-<canvas id="myCanvas" width="300" height="150" style="border: 1px solid red;"></canvas>
 <script>
-    function rectangle(length,width){
+    function rectangle(length, width) {
         this.length = length;
         this.width = width;
         this.getLength = function () {
@@ -28,18 +28,20 @@
             this.width = width;
         }
     }
-    var rectangle = new rectangle(150,100);
-    rectangle.setLength(100);
-    rectangle.getWidth(50);
+
+    var rectangle = new rectangle(200, 150);
+
     let length = rectangle.length
     let width = rectangle.width
+
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     ctx.beginPath();
-    ctx.rect(50, 30, length, width);
+    ctx.rect(100, 50, length, width);
     ctx.stroke();
-    document.getElementById("acreage").innerHTML = "Dien tich: " + (length*width) + "m vuong";
-    document.getElementById("perimeter").innerHTML = "Chu vi: " + (length+width)*2 + "m";
+
+    document.getElementById("acreage").innerHTML = "Dien tich: " + (length * width) + "m vuong";
+    document.getElementById("perimeter").innerHTML = "Chu vi: " + (length + width) * 2 + "m";
 </script>
 </body>
 </html>
