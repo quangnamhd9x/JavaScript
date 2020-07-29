@@ -1,27 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
-    function palindrome(string){
-        var reverseString = '';
-        for(var i in string){
-            reverseString += string[(string.length - i) - 1];
+
+    function birthdayCakeCandles(ar) {
+        let count = 0;
+        let max = Math.max(ar);
+        for (let i = 0; i < ar.length; i++){
+            if (ar[i] == max){
+                count++;
+            }
         }
-        if(string === reverseString){
-            alert('doi xung');
-        }else{
-            alert('khong doi xung');
-        }
+        console.log(count);
     }
 
-    palindrome(prompt("nhap vao chuoi ngau nhien"));
 </script>
 </body>
 </html>

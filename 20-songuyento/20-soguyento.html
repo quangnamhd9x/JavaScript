@@ -9,19 +9,20 @@
     let count = 0;
     let num = 2;
     let a = +prompt("Input a number you want to show");
-    while (count < a){
-        if (isPrime(num)){
+    while (count < a) {
+        if (isPrime(num)) {
             count++;
             document.write(num + "<br>");
         }
         num++;
     }
+
     function isPrime(num) {
-        if (num <2){
+        if (num < 2) {
             return false;
         }
-        for (let i = 2; i <= Math.sqrt(num) ; i++) {
-            if (num % i === 0){
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
                 return false;
             }
         }
