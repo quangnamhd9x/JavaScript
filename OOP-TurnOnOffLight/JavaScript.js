@@ -1,18 +1,24 @@
 class SwitchButton {
-    constructor(status, lamp) {
+    constructor() {
         this.status = true;
+        this.lamp = "";
+    }
+
+    connectToLamp(ElectricLamp) {
         this.lamp = ElectricLamp;
     }
-    SwitchBunton(){
 
+    switchOn() {
+        this.lamp.turnOn();
+        this.status = true;
     }
-    connectToLamp(ElectricLamp){
-        this.E
-    }
-    switchOff(){
 
+    switchOff() {
+        this.lamp.turnOff();
+        this.status = false;
     }
-    switchOn(){
-        
+    switchButton(){
+        this.status ? this.switchOff() : this.switchOn();
     }
 }
+

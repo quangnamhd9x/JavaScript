@@ -17,8 +17,8 @@ class Mobile {
         this.battery--;
     }
 
-    receiveMsg(name,msg){
-        this.inbox.push(msg);
+    receiveMsg(message){
+        this.inbox.push(message);
         // alert(`${this.name} da nhan 1 tin nhan tu ${name}`);
     }
 }

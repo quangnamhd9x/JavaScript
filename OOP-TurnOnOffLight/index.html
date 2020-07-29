@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="JavaScript.js"></script>
+
     <link rel="stylesheet" href="style.css">
+    <script src="JavaScript.js"></script>
+    <script src="ElectricLamp.js"></script>
 </head>
 <body>
+    <script>
+        let electricLamp = new ElectricLamp();
+        let switchButton = new SwitchButton();
+        switchButton.connectToLamp(electricLamp);
+        for (let i = 1; i <=10 ; i++) {
+            switchButton.switchButton();
+        }
 
+    </script>
 </body>
 </html>
