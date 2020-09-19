@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fibo = +prompt("nhap vao so luong fibonacci ban muon xem:");
+    let temp = 0;
+    let a = 1;
+    let b = 0;
+    for (let i = 1; i <= fibo; i++) {
+        temp = a;
+        a = a + b;
+        b = temp;
+        document.write(temp + "<br>");
+    }
+</script>
+</body>
+</html>

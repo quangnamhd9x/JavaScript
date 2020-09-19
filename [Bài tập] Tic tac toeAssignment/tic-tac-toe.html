@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caro game</title>
+</head>
+<style>
+    td {
+        border: 1px solid black;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<div id="board">
+    <table id="boardTable">
+
+    </table>
+</div>
+<script>
+    let turn = 1;
+
+    function creatBoard() {
+        let str = "";
+        for (let i = 0; i < 10; i++) {
+            str += "<tr>";
+            for (let j = 0; j < 10; j++) {
+                // str += "<td id = 'cell-" + i + "-" + j +' onclick="clickCell(this)"></td>';
+                str += `<td id="cell-${i}-${j}" onclick="clickCell(${i},${j})"></td>`
+            }
+            str += "</tr>";
+        }
+        document.getElementById("boardTable").innerHTML = str;
+    }
+
+    creatBoard();
+
+    function clickCell(x, y) {
+        let cell = document.getElementById(`cell-${x}-${y}`);
+        if (cell.innerHTML == "") {
+            if (turn == 1) {
+                cell.innerHTML = "x";
+                turn = 2;
+            } else {
+                cell.innerHTML = "o";
+                turn = 1;
+            }
+        }
+        checkNgang(x, y);
+        checkDoc(x, y);
+        checkCheo1(x, y);
+        checkCheo2(x, y);
+    }
+
+    function getValue(x, y) {
+        let cell = document.getElementById(`cell-${x}-${y}`);
+        return cell.innerHTML;
+    }
+
+    function checkNgang(x, y) {
+        let i = 1;
+        let j = 1;
+        let count = 1;
+        while (getValue(x, y) == getValue(x, y + i)) {
+            count++;
+            i++;
+        }
+        while (getValue(x, y) == getValue(x, y - j)) {
+            count++;
+            j++;
+        }
+
+        if (count >= 5) {
+            alert("Win");
+        }
+    }
+
+    function checkDoc(x, y) {
+        let i = 1;
+        let j = 1;
+        let count = 1;
+        while (getValue(x, y) == getValue(x + i, y)) {
+            count++;
+            i++;
+        }
+        while (getValue(x, y) == getValue(x - j, y)) {
+            count++;
+            j++;
+        }
+
+        if (count >= 5) {
+            alert("Win");
+        }
+    }
+
+    function checkCheo1(x, y) {
+        let i = 1;
+        let j = 1;
+        let count = 1;
+        while (getValue(x, y) == getValue(x - i, y + i)) {
+            count++;
+            i++;
+        }
+        while (getValue(x, y) == getValue(x + j, y - j)) {
+            count++;
+            j++;
+        }
+
+        if (count >= 5) {
+            alert("Win");
+        }
+    }
+
+    function checkCheo2(x, y) {
+        let i = 1;
+        let j = 1;
+        let count = 1;
+        while (getValue(x, y) == getValue(x - i, y - i)) {
+            count++;
+            i++;
+        }
+        while (getValue(x, y) == getValue(x + j, y + j)) {
+            count++;
+            j++;
+        }
+
+        if (count >= 5) {
+            alert("Win");
+        }
+    }
+</script>
+</body>
+</html>
